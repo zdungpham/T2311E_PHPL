@@ -24,9 +24,6 @@
             <h2><?php echo $product["name"];?></h2>
             <form action="/add_to_cart.php" method="post">
                 <input type="hidden" name="product_id" value="<?php echo $product["id"] ?>"/>
-                <input type="hidden" name="product_thumnail" value="<?php echo $product["thumbnail"] ?>"/>
-                <input type="hidden" name="product_name" value="<?php echo $product["name"] ?>"/>
-                <input type="hidden" name="product_price" value="<?php echo $product["price"] ?>"/>
                 <input value="1" type="number" name="bought_qty"/>
                 <button <?php if($product["qty"] == 0) echo "disabled";?> class="btn btn-primary" type="submit">Add to cart</button>
                 <?php if($product["qty"] == 0):?>
